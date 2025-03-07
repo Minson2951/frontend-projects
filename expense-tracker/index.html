@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Expense Master - Smart Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Expense Master</h1>
+        
+        <div class="total-section">
+            <div>Total Expenses</div>
+            <div class="total-amount" id="totalAmount">₹0.00</div>
+        </div>
+        
+        <div class="warning-banner" id="warningBanner">
+            ⚠️ Monthly expenses exceeded ₹2000! Consider saving money!
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="expense-name" required>
+            <label>Expense Name</label>
+        </div>
+
+        <div class="grid-container">
+            <div class="input-group">
+                <input type="number" id="expense-amount" required>
+                <label>Amount (₹)</label>
+            </div>
+            
+            <div class="input-group">
+                <input type="date" id="expense-date" required>
+                <label>Date</label>
+            </div>
+            
+            <div class="input-group">
+                <select id="expense-category" required>
+                    <option value="Food">🍔 Food</option>
+                    <option value="Transport">🚗 Transport</option>
+                    <option value="Entertainment">🎬 Entertainment</option>
+                    <option value="Shopping">🛍️ Shopping</option>
+                    <option value="Other">📦 Other</option>
+                </select>
+            </div>
+        </div>
+
+        <button onclick="addExpense()">➕ Add Expense</button>
+
+        <div class="dashboard">
+            <div>
+                <div class="expense-list" id="expenseList"></div>
+            </div>
+            <div>
+                <canvas id="expenseChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
