@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build": "cd expense-tracker && npm install && npm run build"
+  }
+}
